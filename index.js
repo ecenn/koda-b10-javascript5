@@ -1,27 +1,39 @@
-// callback
+const input = 20
 
-function hitungLingkaran(r, cb0, cb1, cb2) {
-    let pi = cb0(r)
-    cb1(r, pi)
-    cb2(r, pi)
+// program dengan function
+
+function celciusConverter(c) {
+    const f = c * 9 / 5 + 32
+    const r = c * 4 / 5
+    const k = c + 273
+    console.log(`${c} derajat Celcius = ${f} derajat Fahrenheit`)
+    console.log(`${c} derajat Celcius = ${r} derajat Reamur`)
+    console.log(`${c} derajat Celcius = ${k} derajat Kelvin`)
 }
 
-function cekPi(x) {
-    if (x % 7 === 0) {
-        return 22/7
-    } else {
-        return 3.14
-    }
+console.log(`Tanpa Built-In Method`)
+celciusConverter(input)
+
+// program dengan built-in function
+
+function cToF(c) {
+    return c * 9 / 5 + 32
 }
 
-function luas(a, pi1) {
-    const luas = pi1 * a * a
-    console.log(luas)
+function cToR(c) {
+    return c * 4 / 5
 }
 
-function keliling(b, pi2) {
-    const keliling = 2 * pi2 * b
-    console.log(keliling)
+function cToK(c) {
+    return c + 273
 }
 
-hitungLingkaran(10, cekPi, luas, keliling)
+console.log(`\nDengan Built-In Method`)
+
+const f = cToF(input)
+const r = cToR(input)
+const k = cToK(input)
+
+console.log(`${input} derajat Celcius = ${f} derajat Fahrenheit`)
+console.log(`${input} derajat Celcius = ${r} derajat Reamur`)
+console.log(`${input} derajat Celcius = ${k} derajat Kelvin`)

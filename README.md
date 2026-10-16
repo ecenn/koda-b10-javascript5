@@ -1,9 +1,6 @@
-# Program: Menghitung Luas dan Keliling Lingkaran
+# Built-In Method
 
-## Cara Kerja Program
-
-- Ada 4 function (hitungLingkaran, cekPi, luas, dan keliling)
-- Menjalankan function hitungLingkaran dengan input parameter nilai r, callback function cekPi, callback function luas, dan callback function keliling
+Menerapkan materi built-in method pada program konversi suhu.
 
 ## Flowchart
 
@@ -12,23 +9,15 @@
 flowchart LR
 
 a((start))
-b[/r/]
-c{r % 7 == 0}
-d[pi = 22 / 7] 
-e[pi = 3.14]
-f[luas = r * r * pi]
-g[/luas/]
-h[keliling = 2 * pi * r]
-i[/keliling/]
-j(((stop)))
+b[/c/]
+c[f = c * 9 / 5 + 32]
+d[r = c * 4 / 5]
+e[k = c + 273]
+f[/f/]
+g[/r/]
+h[/k/]
+z(((stop)))
 
-a --> b
-b --> c
-c --true--> d --> f
-c --false--> e --> f
-f --> g
-g --> h
-h --> i
-i --> j
+a --> b --> c --> d --> e --> f --> g --> h --> z
 
-``` 
+```
