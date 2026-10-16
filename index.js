@@ -1,20 +1,6 @@
-const input = 20
+const input = 24
 
-// program dengan function
-
-function celciusConverter(c) {
-    const f = c * 9 / 5 + 32
-    const r = c * 4 / 5
-    const k = c + 273
-    console.log(`${c} derajat Celcius = ${f} derajat Fahrenheit`)
-    console.log(`${c} derajat Celcius = ${r} derajat Reamur`)
-    console.log(`${c} derajat Celcius = ${k} derajat Kelvin`)
-}
-
-console.log(`Tanpa Built-In Method`)
-celciusConverter(input)
-
-// program dengan built-in function
+// program tanpa built-in method
 
 function cToF(c) {
     return c * 9 / 5 + 32
@@ -28,12 +14,34 @@ function cToK(c) {
     return c + 273
 }
 
-console.log(`\nDengan Built-In Method`)
+console.log(`\nTanpda Built-In Method`)
 
-const f = cToF(input)
-const r = cToR(input)
-const k = cToK(input)
+console.log(`${input} derajat Celcius = ${cToF(input)} derajat Fahrenheit`)
+console.log(`${input} derajat Celcius = ${cToR(input)} derajat Reamur`)
+console.log(`${input} derajat Celcius = ${cToK(input)} derajat Kelvin`)
 
-console.log(`${input} derajat Celcius = ${f} derajat Fahrenheit`)
-console.log(`${input} derajat Celcius = ${r} derajat Reamur`)
-console.log(`${input} derajat Celcius = ${k} derajat Kelvin`)
+// program dengan built-in method
+
+function fBuiltIn(c) {
+    let f = c * 9 / 5 + 32
+    f = Math.round(f)
+    return f
+}
+
+function rBuiltIn(c) {
+    let r = c * 4 / 5
+    r = Math.round(r)
+    return r
+}
+
+function kBuiltIn(c) {
+    let k = c + 273
+    k = Math.round(k)
+    return k
+}
+
+console.log(`\nDengan Built-In Method (Math.round())`)
+
+console.log(`${input} derajat Celcius = ${fBuiltIn(input)} derajat Fahrenheit`)
+console.log(`${input} derajat Celcius = ${rBuiltIn(input)} derajat Reamur`)
+console.log(`${input} derajat Celcius = ${kBuiltIn(input)} derajat Kelvin`)
