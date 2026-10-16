@@ -1,47 +1,70 @@
 const input = 24
 
+console.log(`Suhu: ${input} derajat Celsius`)
+
 // program tanpa built-in method
 
 function cToF(c) {
-    return c * 9 / 5 + 32
+    if (typeof c == 'number') {
+        return `${c * 9 / 5 + 32} derajat Fahrenheit`
+    } else {
+        return "Error Input: Suhu bukan number"
+    }
 }
 
 function cToR(c) {
-    return c * 4 / 5
+    if (typeof c == 'number') {
+        return `${c * 4 / 5} derajat Reamur`
+    } else {
+        return "Error Input: Suhu bukan number"
+    }
 }
 
 function cToK(c) {
-    return c + 273
+    if (typeof c == 'number') {
+        return `${c + 273} derajat Kelvin`
+    } else {
+        return "Error Input: Suhu bukan number"
+    }
 }
 
-console.log(`\nTanpda Built-In Method`)
+console.log(`\nTanpa Built-In Method`)
 
-console.log(`${input} derajat Celcius = ${cToF(input)} derajat Fahrenheit`)
-console.log(`${input} derajat Celcius = ${cToR(input)} derajat Reamur`)
-console.log(`${input} derajat Celcius = ${cToK(input)} derajat Kelvin`)
+console.log(cToF(input))
+console.log(cToR(input))
+console.log(cToK(input))
 
 // program dengan built-in method
 
 function fBuiltIn(c) {
-    let f = c * 9 / 5 + 32
-    f = Math.round(f)
-    return f
+    const cek = Number.isFinite(c)
+    if (cek) {
+        return `${c * 9 / 5 + 32} derajat Fahrenheit`
+    } else {
+        return "Error Input: Suhu bukan number"   
+    }
 }
 
 function rBuiltIn(c) {
-    let r = c * 4 / 5
-    r = Math.round(r)
-    return r
+    const cek = Number.isFinite(c)
+    if (cek) {
+        return `${c * 4 / 5} derajat Reamur`
+    } else {
+        return "Error Input: Suhu bukan number"   
+    }
 }
 
 function kBuiltIn(c) {
-    let k = c + 273
-    k = Math.round(k)
-    return k
+    const cek = Number.isFinite(c)
+    if (cek) {
+        return `${c + 273} derajat Kelvin`
+    } else {
+        return "Error Input: Suhu bukan number"   
+    }
 }
 
-console.log(`\nDengan Built-In Method (Math.round())`)
+console.log(`\nDengan Built-In Method`)
 
-console.log(`${input} derajat Celcius = ${fBuiltIn(input)} derajat Fahrenheit`)
-console.log(`${input} derajat Celcius = ${rBuiltIn(input)} derajat Reamur`)
-console.log(`${input} derajat Celcius = ${kBuiltIn(input)} derajat Kelvin`)
+console.log(fBuiltIn(input))
+console.log(rBuiltIn(input))
+console.log(kBuiltIn(input))
