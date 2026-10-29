@@ -1,0 +1,29 @@
+{
+  "name": "koda-b10-javascript5",
+  "version": "1.0.0",
+  "description": "Menerapkan materi built-in method pada program konversi suhu.",
+  "homepage": "https://github.com/ecenn/koda-b10-javascript5#readme",
+  "bugs": {
+    "url": "https://github.com/ecenn/koda-b10-javascript5/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecenn/koda-b10-javascript5.git"
+  },
+  "license": "MIT",
+  "author": "Jason Felix",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0"
+  }
+}
